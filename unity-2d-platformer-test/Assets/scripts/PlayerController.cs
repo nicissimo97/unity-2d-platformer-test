@@ -5,6 +5,7 @@ public class PlayerController : MonoBehaviour {
 
 	public float movingSpeed;
 	public Rigidbody2D rigidBody;
+	public Animator animator;
 	public float jumpingSpeed;
 	public Transform groundCheck;
 	public float groundCheckRadius;
@@ -13,7 +14,7 @@ public class PlayerController : MonoBehaviour {
 
 	void Start () {
 		rigidBody = GetComponent<Rigidbody2D>();
-
+		animator = GetComponent<Animator>();
 	}
 	
 	// Update is called once per frame
@@ -31,5 +32,8 @@ public class PlayerController : MonoBehaviour {
 		if (Input.GetButtonDown ("Jump") && isGrounded) {
 			rigidBody.velocity = new Vector3 (rigidBody.velocity.x, jumpingSpeed, 0f);
 		}
+
+		animator.SetFloat("Speed", Mathf.Abs (rigidBody.velocity.x));
+		animator.SetBool ("Grounded", isGrounded);
 	}
 }

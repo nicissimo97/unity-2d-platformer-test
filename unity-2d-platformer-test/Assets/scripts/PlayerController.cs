@@ -18,15 +18,17 @@ public class PlayerController : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
 
 		isGrounded = Physics2D.OverlapCircle (groundCheck.position, groundCheckRadius, whatsGround);
 
 		if (Input.GetAxisRaw ("Horizontal") > 0f) {
 			rigidBody.velocity = new Vector3 (movingSpeed, rigidBody.velocity.y, 0f);
+			transform.localScale = new Vector3 (1f,1f,1f);
 		}
 		if (Input.GetAxisRaw ("Horizontal") < 0f) {
 			rigidBody.velocity = new Vector3 (-movingSpeed, rigidBody.velocity.y, 0f);
+			transform.localScale = new Vector3 (-1f,1f,1f);
 		}
 
 		if (Input.GetButtonDown ("Jump") && isGrounded) {

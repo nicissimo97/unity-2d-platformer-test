@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4364696562241434}
   - component: {fileID: 212312453512961994}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: sprites692_123 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36,7 +36,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4465694107183282}
   - component: {fileID: 61417712793164820}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: platform 1x7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52,7 +52,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4192531181497110}
   - component: {fileID: 212773011752156218}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: sprites692_124
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68,7 +68,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4156993328871400}
   - component: {fileID: 212968478438623176}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: sprites692_123 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -84,7 +84,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4815307286503902}
   - component: {fileID: 212026869959572520}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: sprites692_123
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -100,7 +100,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4300161103772694}
   - component: {fileID: 212782652630374774}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: sprites692_123 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -116,7 +116,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4953632571063620}
   - component: {fileID: 212628629682005258}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: sprites692_123 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -132,7 +132,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4923915437205214}
   - component: {fileID: 212498418417568478}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: sprites692_122
   m_TagString: Untagged
   m_Icon: {fileID: 0}

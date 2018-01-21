@@ -18,7 +18,7 @@ public class PlayerController : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void FixedUpdate () {
+	void Update () {
 
 		isGrounded = Physics2D.OverlapCircle (groundCheck.position, groundCheckRadius, whatsGround);
 
@@ -37,5 +37,13 @@ public class PlayerController : MonoBehaviour {
 
 		animator.SetFloat("Speed", Mathf.Abs (rigidBody.velocity.x));
 		animator.SetBool ("Grounded", isGrounded);
+		Debug.Log ("Done 1");
+	}
+
+	void OnTriggerEnter2D(Collider2D other){
+		if (other.gameObject.tag == "killplane") {
+			gameObject.SetActive (false);
+			Debug.Log ("Done");
+		}
 	}
 }

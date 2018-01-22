@@ -9,7 +9,6 @@ public class CameraController : MonoBehaviour {
 	private Vector3 targetPosition;
 	public float smoothing;
 
-	// Update is called once per frame
 	void Update () {
 		targetPosition = new Vector3(target.transform.position.x, transform.position.y, transform.position.z);
 

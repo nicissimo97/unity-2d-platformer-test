@@ -13,11 +13,13 @@ public class PlayerController : MonoBehaviour {
 	public LayerMask whatsGround;
 	public bool isGrounded;
 	public Vector3 respawnPosition;
+	public LevelManagerController levelManager;
 
 	void Start () {
 		rigidBody = GetComponent<Rigidbody2D>();
 		animator = GetComponent<Animator>();
 		respawnPosition = transform.position;
+		levelManager = FindObjectOfType<LevelManagerController> ();
 	}
 
 	void Update () {
@@ -45,7 +47,8 @@ public class PlayerController : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other){
 		if (other.gameObject.tag == "killplane") {
 			//gameObject.SetActive (false);
-			transform.position = respawnPosition;
+			levelManager.Respawn ();
+			//transform.position = respawnPosition;
 		}
 		if (other.tag == "checkpoint") {
 			respawnPosition = other.transform.position;

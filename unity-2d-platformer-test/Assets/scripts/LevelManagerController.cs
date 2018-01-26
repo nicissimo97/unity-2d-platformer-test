@@ -6,6 +6,7 @@ public class LevelManagerController : MonoBehaviour {
 
 	public float waitToRespawn;
 	public PlayerController player;
+	public GameObject explosion;
 
 	// Use this for initialization
 	void Start () {
@@ -23,6 +24,7 @@ public class LevelManagerController : MonoBehaviour {
 
 	public IEnumerator RespawnCoroutine(){
 		player.gameObject.SetActive (false);
+		Instantiate (explosion, player.transform.position, player.transform.rotation);
 		yield return new WaitForSeconds (waitToRespawn);
 		player.transform.position = player.respawnPosition;
 		player.gameObject.SetActive (true);

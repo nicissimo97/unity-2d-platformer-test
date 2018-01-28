@@ -14,7 +14,7 @@ public class DamageController : MonoBehaviour {
 	void OnTriggerEnter2D (Collider2D other){
 		if (other.tag == "Player") {
 			levelManager.Respawn();
-			Debug.Log ("OK");
+			//Debug.Log ("OK");
 		}
 	}
 

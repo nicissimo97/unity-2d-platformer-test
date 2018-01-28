@@ -54,4 +54,16 @@ public class PlayerController : MonoBehaviour {
 			respawnPosition = other.transform.position;
 		}
 	}
+
+	void OnCollisionEnter2D(Collision2D other){
+		if (other.gameObject.tag == "movingPlatform") {
+			transform.parent = other.transform;
+		}
+	}
+
+	void OnCollisionExit2D(Collision2D other){
+		if (other.gameObject.tag == "movingPlatform") {
+			transform.parent = null;
+		}
+	}
 }

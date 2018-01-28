@@ -1,21 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LevelManagerController : MonoBehaviour {
 
 	public float waitToRespawn;
 	public PlayerController player;
 	public GameObject explosion;
+	public int coinCount;
+	public Text coinCountDisplay;
 
-	// Use this for initialization
 	void Start () {
 		player = FindObjectOfType<PlayerController> ();
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
+		coinCountDisplay.text = "Coins: " + coinCount;
 	}
 
 	public void Respawn(){
@@ -28,5 +26,10 @@ public class LevelManagerController : MonoBehaviour {
 		yield return new WaitForSeconds (waitToRespawn);
 		player.transform.position = player.respawnPosition;
 		player.gameObject.SetActive (true);
+	}
+
+	public void AddCoin(int coinsToAdd){
+		coinCount = coinCount + coinsToAdd;
+		coinCountDisplay.text = "Coins: " + coinCount;
 	}
 }
